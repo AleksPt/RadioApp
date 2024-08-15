@@ -1,7 +1,7 @@
 # Radio App
 
 ### 📺 Демо:
-[![Alt текст изображения](https://github.com/AleksPt/RadioApp/blob/develop/Images/demoCover.png)](https://youtu.be/f6r7wyhlkjk)
+[![Alt текст изображения](https://github.com/AleksPt/RadioApp/blob/develop/Images/demoCover.png)](https://youtu.be/d-bKla4cewQ)
 
 ### 👨‍💻 Команда:
 <p align="left"> 
