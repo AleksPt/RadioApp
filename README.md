@@ -51,6 +51,13 @@ RadioApp - это приложение для прослушивания онл�
 - [**ТЗ**](https://docs.google.com/document/d/1-BlISKDFamgC4nuxwXqaGcbLrNoGFNRm1JM2Nipj3pk/edit?usp=sharing)
 - [**API**](http://all.api.radio-browser.info)
 
+### 📸 Скриншоты:
+| ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app1.png) |![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app2.png) | ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app3.png)
+|-------|----------|---------|
+| ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app4.png) |![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app5.png) | ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app6.png)
+| ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app7.png) |![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app8.png) | ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app9.png)
+| ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app10.png) |![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app11.png) | ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/app12.png)
+
 ### 🤝 Teamwork:
 ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/teamwork1.png)
 ![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/teamwork2.png)
