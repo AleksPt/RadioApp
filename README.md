@@ -47,7 +47,11 @@ RadioApp - это приложение для прослушивания онл�
  * MVVM + Coordinator
 
 ### 📦 Ресурсы:
-- [**Макет Figma**](https://www.figma.com/design/HmUNtqS4RpPMiUYJqvXV0l/Challenge-%E2%84%962-_Best-Recipes_?m=auto&t=m98Q3VuVb5DLuWku-1)
+- [**Макет Figma**](https://www.figma.com/design/FJtfLn0HWV0xgwjx9aWup5/Challenge-%E2%84%963-%22Radio-App%22?node-id=0-1&t=gsvrtdxxxFBE9pCb-1)
 - [**ТЗ**](https://docs.google.com/document/d/1-BlISKDFamgC4nuxwXqaGcbLrNoGFNRm1JM2Nipj3pk/edit?usp=sharing)
 - [**API**](http://all.api.radio-browser.info)
 
+### 🤝 Teamwork:
+![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/teamwork1.png)
+![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/teamwork2.png)
+![preview](https://github.com/AleksPt/RadioApp/blob/develop/Images/teamwork3.png)
