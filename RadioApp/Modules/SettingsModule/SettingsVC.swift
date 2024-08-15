@@ -72,7 +72,7 @@ final class SettingsVC: UIViewController {
     @objc func goToAboutVC() {
         let vc = WebViewController()
         vc.urlString = "https://dino.zone/ru/"
-        guard let url = URL(string: vc.urlString) else {fatalError("Problems with URL")}
+        guard let _ = URL(string: vc.urlString) else {fatalError("Problems with URL")}
 
         navigationController?.present(vc, animated: true)
     }

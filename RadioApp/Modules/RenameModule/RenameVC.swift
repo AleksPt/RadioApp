@@ -167,9 +167,9 @@ private extension RenameVC {
                 guard let self else { return }
                 AlertLoading.shared.isPresented(false, from: self)
                 switch result {
-                case .success(let success):
+                case .success(_):
                     completion(true)
-                case .failure(let failure):
+                case .failure(_):
                     showErrorView(.failUpdateEmailOrPassword)
                 }
             }

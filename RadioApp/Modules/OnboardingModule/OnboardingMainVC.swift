@@ -42,10 +42,6 @@ final class OnboardingMainVC: UIPageViewController, UIPageViewControllerDataSour
         }
     }
     
-    deinit {
-        print("onboarding deinit")
-    }
-    
     private func navigateToNextPage() {
         guard let currentVC = viewControllers?.first,
               let nextVC = pageViewController(self, viewControllerAfter: currentVC) else {

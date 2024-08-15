@@ -80,10 +80,6 @@ final class OnboardingPage2VC: UIPageViewController {
         view.backgroundColor = .blue
     }
     
-    deinit {
-        print("deinit")
-    }
-    
     // MARK: - Private Methods
     private func setupUI() {
         view.addSubview(backgroundImageView)
@@ -99,7 +95,7 @@ final class OnboardingPage2VC: UIPageViewController {
     // MARK: - Selector methods
     @objc private func continueButtonTapped() {
         onNext?()
-        print("continueButtonTapped")
+        
     }
 }
 
@@ -117,8 +113,8 @@ extension OnboardingPage2VC {
         continueButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(30)
             make.height.equalTo(58)
-            make.width.equalTo(310)
-            make.right.equalTo(view.safeAreaLayoutGuide).inset(16)
+            make.leading.trailing.equalToSuperview().inset(52)
+            make.centerX.equalToSuperview()
         }
         
         progressStackView.snp.makeConstraints { make in

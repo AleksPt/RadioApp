@@ -18,7 +18,7 @@ class RadioStationCell: UITableViewCell {
         let view = UIView()
         view.layer.borderWidth = 2.0
         view.layer.borderColor = Colors.grey.cgColor
-        view.layer.cornerRadius = 10
+        view.layer.cornerRadius = 15
         view.clipsToBounds = false
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -74,9 +74,9 @@ class RadioStationCell: UITableViewCell {
             conteinerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             conteinerView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -15),
             
-            nameLabel.topAnchor.constraint(equalTo: conteinerView.topAnchor, constant: 24),
+            nameLabel.topAnchor.constraint(equalTo: conteinerView.topAnchor, constant: 18),
             nameLabel.leadingAnchor.constraint(equalTo: conteinerView.leadingAnchor, constant: 22),
-            nameLabel.trailingAnchor.constraint(equalTo: conteinerView.trailingAnchor, constant: -100),
+            nameLabel.trailingAnchor.constraint(equalTo: votesLabel.leadingAnchor, constant: -22),
             
             tagLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5),
             tagLabel.leadingAnchor.constraint(equalTo: conteinerView.leadingAnchor, constant: 22),
@@ -85,8 +85,10 @@ class RadioStationCell: UITableViewCell {
             votesLabel.topAnchor.constraint(equalTo: conteinerView.topAnchor, constant: 12),
             votesLabel.trailingAnchor.constraint(equalTo: likeButtons.leadingAnchor, constant: -4),
             
-            likeButtons.topAnchor.constraint(equalTo: conteinerView.topAnchor, constant: 10),
-            likeButtons.trailingAnchor.constraint(equalTo: conteinerView.trailingAnchor, constant: -10)
+            likeButtons.topAnchor.constraint(equalTo: conteinerView.topAnchor, constant: 15.61),
+            likeButtons.trailingAnchor.constraint(equalTo: conteinerView.trailingAnchor, constant: -13.86),
+            likeButtons.widthAnchor.constraint(equalToConstant: 14.66),
+            likeButtons.heightAnchor.constraint(equalToConstant: 12),
         ])
     }
     
@@ -126,7 +128,7 @@ class RadioStationCell: UITableViewCell {
                     votes! += 1
                     DispatchQueue.main.async { [weak self] in
                         guard let self else { return }
-                        votesLabel.text = "votes\n\(votes!.description)"
+                        votesLabel.text = "votes \(votes!.description)"
                         sender.setImage(UIImage(resource: .likeFilled).withRenderingMode(.alwaysOriginal), for: .normal)
                     }
                 }
@@ -159,15 +161,17 @@ class RadioStationCell: UITableViewCell {
         votesLabel.text = "\(K.votes) \(viewModel.votes)"
         
         stationId = viewModel.id
-        votesLabel.text = "votes\n\(viewModel.votes.description)"
+        votesLabel.text = "votes \(viewModel.votes.description)"
         if let vote = Int(viewModel.votes.description) {
             votes = vote
         }
         
         if isSelected {
             conteinerView.backgroundColor = Colors.pink
+            conteinerView.layer.borderWidth = 0
         } else {
             conteinerView.backgroundColor = .clear
+            conteinerView.layer.borderWidth = 2.0
         }
     }
 }

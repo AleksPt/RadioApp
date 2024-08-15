@@ -76,7 +76,7 @@ final class PlayerView: UIView {
         super.init(frame: .zero)
         if let url = URL(string: "http://icecast.vgtrk.cdnvideo.ru/vestifm_mp3_192kbps") {
             audioPlayer = AVPlayer(url: url)
-            print("Player initialized: \(String(describing: audioPlayer))")
+            
         }
         
         setupUI()
@@ -90,7 +90,7 @@ final class PlayerView: UIView {
     func setStationURL(_ url: URL) {
         audioPlayer?.pause()
         audioPlayer = AVPlayer(url: url)
-        print("set url \(url)")
+        
     }
     
     func play() {
@@ -152,9 +152,9 @@ final class PlayerView: UIView {
     private func togglePlayPause() {
         if audioPlayer?.rate == 0 {
             audioPlayer?.play()
-            print("Play sound")
+            
         } else {
-            print("pause")
+            
             audioPlayer?.pause()
         }
     }

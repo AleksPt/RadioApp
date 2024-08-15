@@ -235,7 +235,7 @@ class SettingsView: UIView {
     }()
     
     @objc func getSet() {
-        print("123")
+        
     }
     
     lazy var backLegalView: UIView = {
@@ -364,7 +364,7 @@ class SettingsView: UIView {
     //MARK: - @objc function
     
     @objc func goToAboutViewController() {
-        print("12345")
+        
     }
     
 }

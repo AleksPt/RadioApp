@@ -33,7 +33,7 @@ final class TimePickerVC: UIViewController {
     let scheduleButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Запланировать уведомление", for: .normal)
-        button.addTarget(self, action: #selector(scheduleNotification), for: .touchUpInside)
+        button.addTarget(TimePickerVC.self, action: #selector(scheduleNotification), for: .touchUpInside)
         return button
     }()
 

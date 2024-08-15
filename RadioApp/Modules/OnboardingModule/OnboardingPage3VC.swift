@@ -56,7 +56,7 @@ final class OnboardingPage3VC: UIViewController {
     
     private lazy var secondProgressView: UIView = {
         let element = UIView()
-        element.backgroundColor = .lightGray
+        element.backgroundColor = UIColor(red: 0.98, green: 0.61, blue: 0.69, alpha: 1.00)
         element.layer.cornerRadius = 5
         return element
     }()
@@ -79,10 +79,6 @@ final class OnboardingPage3VC: UIViewController {
         view.backgroundColor = .blue
     }
     
-    deinit {
-        print("deinit")
-    }
-    
     // MARK: - Private Methods
     private func setupUI() {
         view.addSubview(backgroundImageView)
@@ -98,7 +94,7 @@ final class OnboardingPage3VC: UIViewController {
     // MARK: - Selector methods
     @objc private func startListening() {
         onComplete?()
-        print("Start Listening")
+        
     }
 }
 
@@ -116,8 +112,8 @@ extension OnboardingPage3VC {
         startListeningButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(30)
             make.height.equalTo(58)
-            make.width.equalTo(310)
-            make.right.equalTo(view.safeAreaLayoutGuide).inset(16)
+            make.leading.trailing.equalToSuperview().inset(52)
+            make.centerX.equalToSuperview()
         }
         
         progressStackView.snp.makeConstraints { make in

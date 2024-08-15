@@ -77,10 +77,6 @@ final class OnboardingPage1VC: UIViewController {
         view.backgroundColor = .blue
     }
     
-    deinit {
-        print("deinit")
-    }
-    
     // MARK: - Private Methods
     private func setupUI() {
         view.addSubview(backgroundImageView)
@@ -94,11 +90,10 @@ final class OnboardingPage1VC: UIViewController {
     // MARK: - Selector methods
     @objc private func continueButtonTapped() {
         onNext?()
-        print("continueButtonTapped")
     }
     
     @objc private func skipButtonTapped() {
-        print("skipButtonTapped")
+        
     }
 }
 
@@ -115,19 +110,15 @@ extension OnboardingPage1VC {
         
         headerStackView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).inset(100)
-            make.right.equalTo(view.safeAreaLayoutGuide).inset(90)
-            make.width.equalTo(250)
-        }
-        
-        secondHeaderLabel.snp.makeConstraints { make in
-            make.width.equalTo(220)
+            make.leading.equalTo(getStartedButton.snp.leading)
+            make.width.equalTo(getStartedButton.snp.width)
         }
         
         getStartedButton.snp.makeConstraints { make in
             make.bottom.equalTo(view.safeAreaLayoutGuide).inset(30)
             make.height.equalTo(58)
-            make.width.equalTo(310)
-            make.right.equalTo(view.safeAreaLayoutGuide).inset(16)
+            make.leading.trailing.equalToSuperview().inset(52)
+            make.centerX.equalToSuperview()
         }
     }
 }

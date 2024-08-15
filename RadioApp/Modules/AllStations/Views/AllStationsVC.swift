@@ -15,14 +15,6 @@ final class AllStationsVC: UIViewController {
     private var selectedIndexPath: IndexPath?
     
     // MARK: - UI properties
-    
-    private let vStack: UIStackView = {
-        let stack = UIStackView()
-        stack.axis = .vertical
-        stack.spacing = 10
-        return stack
-    }()
-    
     private lazy var subtitleLabel: UILabel = {
         let label = UILabel()
         label.font = Font.getFont(Font.displayMedium, size: 20)
@@ -72,11 +64,9 @@ final class AllStationsVC: UIViewController {
         view.backgroundColor = Colors.background
         radioTableView.createTable()
         
-        view.addSubview(vStack)
-        
-        vStack.addArrangedSubview(subtitleLabel)
-        vStack.addArrangedSubview(searchTextField)
-        vStack.addArrangedSubview(radioTableView)
+        view.addSubview(subtitleLabel)
+        view.addSubview(searchTextField)
+        view.addSubview(radioTableView)
     }
     
     private func setDelegate() {
@@ -113,14 +103,14 @@ final class AllStationsVC: UIViewController {
     // MARK: - Selectors
     
     @objc private func profileDetailTaped() {
-        print("Show detail profile info")
+        
     }
     
     // Переменная состояния поиска
     private var isSearching: Bool = false
     
     @objc private func toResultSearch() {
-        print("Result search radio stations")
+        
         
         if isSearching {
             // Если мы уже находимся в состоянии поиска, то возвращаемся к начальному экрану
@@ -161,29 +151,24 @@ final class AllStationsVC: UIViewController {
 }
 
 // MARK: - Extensions Set Constraints
-
 extension AllStationsVC {
     private func setConstraints() {
-        
-        vStack.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(5)
-            make.leading.trailing.equalTo(view.safeAreaLayoutGuide)
-        }
-        
         subtitleLabel.snp.makeConstraints { make in
             make.leading.equalToSuperview().offset(60)
+            make.top.equalToSuperview().offset(150)
         }
         
         searchTextField.snp.makeConstraints { make in
-            make.leading.trailing.equalToSuperview().inset(10)
+            make.leading.trailing.equalToSuperview().inset(16.5)
             make.height.equalTo(56)
+            make.top.equalTo(subtitleLabel.snp.bottom).offset(6)
         }
         
         radioTableView.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(40)
-            make.height.equalTo(400)
+            make.top.equalTo(searchTextField.snp.bottom).offset(16)
+            make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-150)
         }
-        
     }
 }
 
@@ -217,7 +202,7 @@ extension AllStationsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        123
     }
     
     //    выбор ячейки в которой играет радио
